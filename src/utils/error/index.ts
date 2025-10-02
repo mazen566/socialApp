@@ -27,3 +27,9 @@ export class BadRequestException extends AppError {
         super(message, 400, errorDetails);
     }
 }
+
+export class ForbiddenException extends AppError {
+    constructor(message: string, errorDetails?: Record<string, any>[]) {
+        super(message, 403, errorDetails);
+    }
+}

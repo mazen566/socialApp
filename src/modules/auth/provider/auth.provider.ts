@@ -7,13 +7,13 @@ export const authProvider = {
         const userRepository = new UserRepository();
         const userExist = await userRepository.exist({ email: verifyAccountDTO.email })
         if(!userExist) {
-        throw new NotFoundException("user not found")
+            throw new NotFoundException("user not found")
         }
         if(userExist.otp !== verifyAccountDTO.otp) {
-        throw new BadRequestException("invalid otp")
+            throw new BadRequestException("invalid otp")
         }
         if(userExist.otpExpiredAt! < new Date()) {
-        throw new BadRequestException("otp expired")
+            throw new BadRequestException("otp expired")
         }
     },
 }

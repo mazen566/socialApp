@@ -35,12 +35,12 @@ export const userSchema = new Schema<IUser>(
         credentialUpdatedAt: Date,
         phoneNumber: String,
         role: {
-            type: String,
+            type: Number,
             enum: SYS_ROLE,
             default: SYS_ROLE.user
         },
         gender: {
-            type: String,
+            type: Number,
             enum: GENDER,
             default: GENDER.male
         },

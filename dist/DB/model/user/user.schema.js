@@ -37,12 +37,12 @@ exports.userSchema = new mongoose_1.Schema({
     credentialUpdatedAt: Date,
     phoneNumber: String,
     role: {
-        type: String,
+        type: Number,
         enum: utils_1.SYS_ROLE,
         default: utils_1.SYS_ROLE.user
     },
     gender: {
-        type: String,
+        type: Number,
         enum: utils_1.GENDER,
         default: utils_1.GENDER.male
     },
