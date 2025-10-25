@@ -19,4 +19,7 @@ export abstract class AbstractRepository<T> {
     async delete(filter: RootFilterQuery<T>) {
         return await this.model.deleteOne(filter)
     }
+    async getAll(filter: RootFilterQuery<T>, projection?: ProjectionType<T>, options?: QueryOptions<T>) {
+        return await this.model.find(filter, projection, options);
+    }
 }

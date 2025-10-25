@@ -22,8 +22,8 @@ export interface IUser {
     otp?: string;
     otpExpiredAt?: Date;
     isVerified: boolean;
-    friendRequests?: ObjectId[]; // or Array<Types.ObjectId> if using mongoose Types
-    friends?: ObjectId[]; // or Array<Types.ObjectId> if using mongoose Types
+    friendRequests?: ObjectId[];
+    friends?: ObjectId[]; 
 }
 
 export interface IUser {
@@ -78,4 +78,3 @@ declare module "express" {
         user?: IUser;
     }
 }
-
